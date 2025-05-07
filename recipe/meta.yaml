@@ -1,5 +1,5 @@
 {% set name = "wagtailmedia" %}
-{% set version = "0.15.2" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wagtailmedia-{{ version }}.tar.gz
-  sha256: 8e1406f432d159e195f5627eec187ec91b02389b9a97dc9ae214a74305592aa3
+  sha256: 1f757984240822a7ddfe3eda8e58243f31a3c29935ce8014499e7e664923d4c9
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,9 +20,11 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
+    - django-taggit
+    - djangorestframework
     - python >={{ python_min }}
-    - wagtail >=4.1
-    - django >=3.2
+    - wagtail >=6.3
+    - django >=4.2
 
 test:
   imports:
