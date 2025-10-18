@@ -1,5 +1,5 @@
 {% set name = "wagtailmedia" %}
-{% set version = "0.17.1" %}
+{% set version = "0.17.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wagtailmedia-{{ version }}.tar.gz
-  sha256: 89f184ea61491d12f551b5b2a019dabad387912ba45419d04c7ee3417a1738c5
+  sha256: 4457e267fc53d8db4c9eb9a48d27f4b47b0823a9f7d0820f2dd98f1ba5d58600
 
 build:
   noarch: python
